@@ -7,33 +7,29 @@ client.on("ready", () => {
   console.log(`Logged in as ${client.user.tag}!`);
 });
 
-let buying = `The current price turnips are being bought for:`;
-
 client.on("message", async message => {
   if (!message.content.startsWith(process.env.PREFIX) || message.author.bot)
     return;
-  const price = message.content.slice(process.env.PREFIX.length).split(" ");
-  const command = price.shift();
+  let arg = message.content.slice(process.env.PREFIX.length).split(" ");
+  const command = arg.shift();
+  let price = parseInt(arg, 10);
 
   var today = new Date();
   var dd = today.getDate();
   var mm = today.getMonth() + 1;
   var hr = today.getHours();
 
-  if (command === "buying") {
-    if (!price.length) {
-      fs.readFile("./buying.md", (err, data) => {
-        if (err) {
-          console.error(err);
-          return;
-        }
-        msg = message.channel.send(data.toString());
-      });
-    } else if (price.length > 0) {
-      if (isNaN(price)) {
-        await message.reply("please enter a valid number.");
+  if (arg.length === 0) {
+    fs.readFile("./buying.md", (err, data) => {
+      if (err) {
+        console.error(err);
         return;
       }
+      msg = message.channel.send(data.toString());
+    });
+    return;
+  } else if (arg.length === 1) {
+    if (price >= 15 && price <= 800) {
       // If no arguments are given, display all current prices.
       let msg = await message.reply(
         `adding your stonks to the stonk market (${price} bells)`
@@ -60,6 +56,9 @@ client.on("message", async message => {
           if (err) return console.log(err);
         });
       });
+    } else {
+      await message.reply("please enter a valid number from 15 to 800.");
+      return;
     }
   }
 });
