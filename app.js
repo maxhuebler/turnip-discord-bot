@@ -41,14 +41,12 @@ client.on("message", async message => {
           if (user) {
             const previous = user.bells;
             user.bells = price;
-            user.save(function(err) {
-              if (err) console.log(err);
-            });
+            user.save(function(err) { if (err) console.log(err); });
             let msg = message.reply(
               `updating your stonks on the stonk market (${price} bells) ${
                 previous < price
-                  ? `Stonks are goings up!`
-                  : `Stonks are going down!`
+                  ? `📈 stonks`
+                  : `📉 not stonks`
               }`
             );
           // Otherwise, let's create a new user with the argument that was passed
@@ -59,7 +57,6 @@ client.on("message", async message => {
             });
             user
               .save()
-              .then(result => console.log(result))
               .catch(err => console.log(err));
             message.reply(
               "thank you for posting your stonk prices for the first time!"
@@ -69,7 +66,6 @@ client.on("message", async message => {
         .catch(err => console.log(err));
     } else {
       await message.reply("please enter a valid number from 15 to 800.");
-      return;
     }
   }
 });
