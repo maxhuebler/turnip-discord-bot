@@ -46,20 +46,23 @@ client.on("message", async message => {
     let msg = "> The price of turnips that are being bought:\n";
     User.find({}, function(err, users) {
       users.forEach(function(user) {
-        msg += ("> **" + user.username + "**: **" + user.bells + "** bells" + user.time + "\n");
+        msg += ("> **" + user.username + "**: **" + user.bells + "** bells " + user.time + "\n");
       });
       message.channel.send(msg);
     });
   } else if (price >= 15 && price <= 800) {
-    let msg = await message.reply(
-      `updating your stonks on the stonk market (${price} bells)`
-    );
     User.findOne({ username: message.member.user.tag }, function(err, user) {
+      const previous = user.bells;
       user.bells = price;
       user.time = `(${mm}/${dd}) ${hr > 12 ? `afternoon` : `morning`}`;
       user.save(function(err) {
         if (err) console.log(err);
       });
+      let msg = message.reply(
+        `updating your stonks on the stonk market (${price} bells) ${
+          previous < price ? `Stonks are goings up!` : `Stonks are going down!`
+        }`
+      );
     });
   } else {
     await message.reply("please enter a valid number from 15 to 800.");
