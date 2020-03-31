@@ -4,10 +4,10 @@ const client = new Discord.Client();
 const mongoose = require("mongoose");
 const User = require("./models/User");
 
-let today = new Date();
-let dd = today.getDate();
-let mm = today.getMonth() + 1;
-let hr = today.getHours();
+let time = new Date();
+let dd = time.getDate();
+let mm = time.getMonth() + 1;
+let hr = time.getHours();
 
 client.on("ready", () => {
   console.log(`Logged in as ${client.user.tag}!`);
@@ -15,6 +15,13 @@ client.on("ready", () => {
     useUnifiedTopology: true,
     useNewUrlParser: true
   });
+  if (hr === 12 || hr === 24) {
+    User.find({}, function(err, users) {
+      users.forEach(function(user) {
+        user.bells = 0;
+      });
+    });
+  }
 });
 
 client.on("message", async message => {
@@ -26,10 +33,10 @@ client.on("message", async message => {
   if (command === "buying") {
     // If no arguments are passed, just post the price list without creating a new user.
     if (!arg.length) {
-      let msg = "> The price of turnips that are being bought:\n";
-      User.find({}, function(err, users) {
+      let msg = `> The price of turnips that are being bought: __**(${mm}/${dd}) ${hr >= 12 ? `afternoon` : `morning`}**__\n`;
+      User.find({}, null, {sort: {bells: -1}}, function(err, users) {
         users.forEach(function(user) {
-          msg += ("> **" + user.username + "**: **" + user.bells + "** bells " + user.time + "\n");
+          msg += ("> **" + user.username + "**: " + user.bells + " bells " + "\n");
         });
         message.channel.send(msg);
       });
@@ -40,7 +47,6 @@ client.on("message", async message => {
           if (user) {
             const previous = user.bells;
             user.bells = price;
-            user.time = `(${mm}/${dd}) ${hr > 12 ? `afternoon` : `morning`}`;
             user.save(function(err) {
               if (err) console.log(err);
             });
@@ -55,8 +61,7 @@ client.on("message", async message => {
           } else {
             const user = new User({
               username: message.member.user.tag,
-              bells: isNaN(price) ? 0 : price,
-              time: `(${mm}/${dd}) ${hr > 12 ? `afternoon` : `morning`}`
+              bells: isNaN(price) ? 0 : price
             });
             user
               .save()
