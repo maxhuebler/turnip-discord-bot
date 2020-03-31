@@ -1,0 +1,11 @@
+{
+  "name": "turnip-stonks",
+  "license": "MIT",
+  "version": "1.0.0",
+  "description": "Discord bot that keeps trakcs of all your turnip stonks",
+  "main": "bot.js",
+  "author": "Max Huebler",
+  "dependencies": {
+    "discord.js": "^12.1.1"
+  }
+}
