@@ -5,7 +5,7 @@ const client = new Discord.Client();
 const User = require("./models/User");
 
 const mongoose = require("mongoose");
-mongoose.connect(process.env.MONGOD_URI, {
+mongoose.connect(process.env.MONGODB_URI, {
   useUnifiedTopology: true,
   useNewUrlParser: true
 });
