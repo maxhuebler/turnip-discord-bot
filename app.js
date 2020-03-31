@@ -1,17 +1,15 @@
 require("dotenv").config();
 const Discord = require("discord.js");
 const client = new Discord.Client();
-
-const User = require("./models/User");
-
 const mongoose = require("mongoose");
-mongoose.connect(process.env.MONGODB_URI, {
-  useUnifiedTopology: true,
-  useNewUrlParser: true
-});
+const User = require("./models/User");
 
 client.on("ready", () => {
   console.log(`Logged in as ${client.user.tag}!`);
+  mongoose.connect(process.env.MONGODB_URI, {
+    useUnifiedTopology: true,
+    useNewUrlParser: true
+  });
 });
 
 client.on("message", async message => {
@@ -44,31 +42,28 @@ client.on("message", async message => {
     })
     .catch(err => console.log(err));
 
-  // If no arguments are given, display all current prices.
   if (arg.length === 0) {
-    let msg = "> The price of turnips that are being bought:\n"
+    let msg = "> The price of turnips that are being bought:\n";
     User.find({}, function(err, users) {
       users.forEach(function(user) {
         msg += ("> **" + user.username + "**: **" + user.bells + "** bells" + user.time + "\n");
       });
       message.channel.send(msg);
     });
-  // Command: (!buying {price}) update the users bell amount
-  } else {
-    if (price >= 15 && price <= 800) {
-      let msg = await message.reply(
-        `adding your stonks to the stonk market (${price} bells)`
-      );
-      User.findOne({ username: message.member.user.tag}, function (err, user) {
-        user.bells = price;
-        user.save(function (err) {
-          if (err) console.log(err);
-        })
+  } else if (price >= 15 && price <= 800) {
+    let msg = await message.reply(
+      `updating your stonks on the stonk market (${price} bells)`
+    );
+    User.findOne({ username: message.member.user.tag }, function(err, user) {
+      user.bells = price;
+      user.time = `(${mm}/${dd}) ${hr > 12 ? `afternoon` : `morning`}`;
+      user.save(function(err) {
+        if (err) console.log(err);
       });
-    } else {
-      await message.reply("please enter a valid number from 15 to 800.");
-      return;
-    }
+    });
+  } else {
+    await message.reply("please enter a valid number from 15 to 800.");
+    return;
   }
 });
 
