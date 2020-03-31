@@ -13,7 +13,7 @@ client.on("message", async message => {
   if (!message.content.startsWith(process.env.PREFIX) || message.author.bot)
     return;
   const price = message.content.slice(process.env.PREFIX.length).split(" ");
-  const command = price.shift().toLowerCase();
+  const command = price.shift();
 
   var today = new Date();
   var dd = today.getDate();
@@ -30,6 +30,10 @@ client.on("message", async message => {
         msg = message.channel.send(data.toString());
       });
     } else if (price.length > 0) {
+      if (isNaN(price)) {
+        await message.reply("please enter a valid number.");
+        return;
+      }
       // If no arguments are given, display all current prices.
       let msg = await message.reply(
         `adding your stonks to the stonk market (${price} bells)`
