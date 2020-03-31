@@ -15,13 +15,6 @@ client.on("ready", () => {
     useUnifiedTopology: true,
     useNewUrlParser: true
   });
-  if (hr === 12 || hr === 24) {
-    User.find({}, function(err, users) {
-      users.forEach(function(user) {
-        user.bells = 0;
-      });
-    });
-  }
 });
 
 client.on("message", async message => {
