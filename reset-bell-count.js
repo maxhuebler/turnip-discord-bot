@@ -7,6 +7,7 @@ mongoose.connect(process.env.MONGODB_URI, {
   useNewUrlParser: true
 });
 
-User.updateMany({}, {bells: 0}, function(err) {
-  if (err) { console.log(err) };
+// Heroku Scheduler job that runs this daily bell reset at (12am/pm EST)
+User.updateMany({}, { bells: 0 }, function(err) {
+  if (err) { console.log(err); }
 });

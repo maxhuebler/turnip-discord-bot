@@ -24,7 +24,7 @@ client.on("message", async message => {
   let price = parseInt(arg, 10);
 
   if (command === "buying") {
-    // If no arguments are passed, just post the price list without creating a new user.
+    // If no argument was passed, just post the price list without creating a new user.
     if (!arg.length) {
       let msg = `> The price of turnips that are being bought: __**(${mm}/${dd}) ${hr >= 12 ? `afternoon` : `morning`}**__\n`;
       User.find({}, null, {sort: {bells: -1}}, function(err, users) {
@@ -33,6 +33,7 @@ client.on("message", async message => {
         });
         message.channel.send(msg);
       });
+    // Argument was passed to the buying command
     } else if (price >= 15 && price <= 800) {
       User.findOne({ username: message.member.user.tag })
         .then(user => {
@@ -50,7 +51,7 @@ client.on("message", async message => {
                   : `Stonks are going down!`
               }`
             );
-          // Otherwise, let's create a new user with the argument that were passed
+          // Otherwise, let's create a new user with the argument that was passed
           } else {
             const user = new User({
               username: message.member.user.tag,
