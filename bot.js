@@ -1,6 +1,6 @@
 const Discord = require("discord.js");
-const { prefix, token } = require("./config");
 const client = new Discord.Client();
+require("dotenv").config();
 const fs = require("fs");
 
 client.on("ready", () => {
@@ -10,8 +10,9 @@ client.on("ready", () => {
 let buying = `The current price turnips are being bought for:`;
 
 client.on("message", async message => {
-  if (!message.content.startsWith(prefix) || message.author.bot) return;
-  const price = message.content.slice(prefix.length).split(" ");
+  if (!message.content.startsWith(process.env.PREFIX) || message.author.bot)
+    return;
+  const price = message.content.slice(process.env.PREFIX.length).split(" ");
   const command = price.shift().toLowerCase();
 
   var today = new Date();
@@ -59,4 +60,4 @@ client.on("message", async message => {
   }
 });
 
-client.login(token);
+client.login(process.env.TOKEN);
