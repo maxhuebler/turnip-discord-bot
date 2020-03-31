@@ -4,6 +4,11 @@ const client = new Discord.Client();
 const mongoose = require("mongoose");
 const User = require("./models/User");
 
+let today = new Date();
+let dd = today.getDate();
+let mm = today.getMonth() + 1;
+let hr = today.getHours();
+
 client.on("ready", () => {
   console.log(`Logged in as ${client.user.tag}!`);
   mongoose.connect(process.env.MONGODB_URI, {
@@ -13,60 +18,60 @@ client.on("ready", () => {
 });
 
 client.on("message", async message => {
-  if (!message.content.startsWith(process.env.PREFIX) || message.author.bot)
-    return;
-  let arg = message.content.slice(process.env.PREFIX.length).split(" ");
+  if (!message.content.startsWith("!") || message.author.bot) return;
+  let arg = message.content.slice("!".length).split(" ");
   const command = arg.shift();
   let price = parseInt(arg, 10);
 
-  var today = new Date();
-  var dd = today.getDate();
-  var mm = today.getMonth() + 1;
-  var hr = today.getHours();
-
-  User.findOne({ username: message.member.user.tag })
-    .then(user => {
-      if (user) {
-        console.log("User already taken");
-      } else {
-        const user = new User({
-          username: message.member.user.tag,
-          bells: 0,
-          time: `(${mm}/${dd}) ${hr > 12 ? `afternoon` : `morning`}`
+  if (command === "buying") {
+    // If no arguments are passed, just post the price list without creating a new user.
+    if (!arg.length) {
+      let msg = "> The price of turnips that are being bought:\n";
+      User.find({}, function(err, users) {
+        users.forEach(function(user) {
+          msg += ("> **" + user.username + "**: **" + user.bells + "** bells " + user.time + "\n");
         });
-        user
-          .save()
-          .then(result => console.log(result))
-          .catch(err => console.log(err));
-      }
-    })
-    .catch(err => console.log(err));
-
-  if (arg.length === 0) {
-    let msg = "> The price of turnips that are being bought:\n";
-    User.find({}, function(err, users) {
-      users.forEach(function(user) {
-        msg += ("> **" + user.username + "**: **" + user.bells + "** bells " + user.time + "\n");
+        message.channel.send(msg);
       });
-      message.channel.send(msg);
-    });
-  } else if (price >= 15 && price <= 800) {
-    User.findOne({ username: message.member.user.tag }, function(err, user) {
-      const previous = user.bells;
-      user.bells = price;
-      user.time = `(${mm}/${dd}) ${hr > 12 ? `afternoon` : `morning`}`;
-      user.save(function(err) {
-        if (err) console.log(err);
-      });
-      let msg = message.reply(
-        `updating your stonks on the stonk market (${price} bells) ${
-          previous < price ? `Stonks are goings up!` : `Stonks are going down!`
-        }`
-      );
-    });
-  } else {
-    await message.reply("please enter a valid number from 15 to 800.");
-    return;
+    } else if (price >= 15 && price <= 800) {
+      User.findOne({ username: message.member.user.tag })
+        .then(user => {
+          // If the user already exists, let's just update that user
+          if (user) {
+            const previous = user.bells;
+            user.bells = price;
+            user.time = `(${mm}/${dd}) ${hr > 12 ? `afternoon` : `morning`}`;
+            user.save(function(err) {
+              if (err) console.log(err);
+            });
+            let msg = message.reply(
+              `updating your stonks on the stonk market (${price} bells) ${
+                previous < price
+                  ? `Stonks are goings up!`
+                  : `Stonks are going down!`
+              }`
+            );
+          // Otherwise, let's create a new user with the argument that were passed
+          } else {
+            const user = new User({
+              username: message.member.user.tag,
+              bells: isNaN(price) ? 0 : price,
+              time: `(${mm}/${dd}) ${hr > 12 ? `afternoon` : `morning`}`
+            });
+            user
+              .save()
+              .then(result => console.log(result))
+              .catch(err => console.log(err));
+            message.reply(
+              "thank you for posting your stonk prices for the first time!"
+            );
+          }
+        })
+        .catch(err => console.log(err));
+    } else {
+      await message.reply("please enter a valid number from 15 to 800.");
+      return;
+    }
   }
 });
 
