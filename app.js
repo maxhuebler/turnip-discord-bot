@@ -75,7 +75,6 @@ client.on("message", async message => {
           if (user) {
             const previous = user.bells;
             user.bells = price;
-            user.fruit = undefined;
             user.save(function(err) { if (err) console.log(err); });
             let msg = message.reply(
               `updating your stonks on the stalk market (${price} bells) ${
