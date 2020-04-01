@@ -23,11 +23,17 @@ client.on("message", async message => {
   const command = arg.shift();
   let price = parseInt(arg, 10);
 
+  let time = new Date();
+  let dd = time.getDate();
+  let mm = time.getMonth() + 1;
+  let hr = time.getHours();
+  let day = time.getDay();
+
   if (command === "buying") {
     // If no argument was passed, just post the price list without creating a new user.
     if (!arg.length) {
       let msg = `> The price of turnips that are being bought: __**(${mm}/${dd}) ${hr >= 12 ? `afternoon` : `morning`}**__\n`;
-      User.find({}, null, {sort: {bells: -1}}, function(err, users) {
+      User.find({}, null, { sort: { bells: -1 } }, function(err, users) {
         users.forEach(function(user) {
           msg += ("> **" + user.username + "**: " + user.bells + " bells " + "\n");
         });
@@ -43,10 +49,8 @@ client.on("message", async message => {
             user.bells = price;
             user.save(function(err) { if (err) console.log(err); });
             let msg = message.reply(
-              `updating your stonks on the stonk market (${price} bells) ${
-                previous < price
-                  ? `📈 stonks`
-                  : `📉 not stonks`
+              `updating your stonks on the stalk market (${price} bells) ${
+                previous < price ? `📈 stonks` : `📉 not stonks`
               }`
             );
           // Otherwise, let's create a new user with the argument that was passed
@@ -55,9 +59,7 @@ client.on("message", async message => {
               username: message.member.user.tag,
               bells: isNaN(price) ? 0 : price
             });
-            user
-              .save()
-              .catch(err => console.log(err));
+            user.save().catch(err => console.log(err));
             message.reply(
               "thank you for posting your stonk prices for the first time!"
             );
