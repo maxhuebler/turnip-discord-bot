@@ -50,7 +50,7 @@ client.on("message", async message => {
           }
         })
     } else if (arg == "coconut") {
-      let msg = message.reply('coconuts are not real fruits');
+      let msg = message.reply('coconuts are not real');
     } else {
       await message.reply("please enter a valid native fruit (peach, orange, apple, pear, cherry)");
     }
@@ -75,6 +75,7 @@ client.on("message", async message => {
           if (user) {
             const previous = user.bells;
             user.bells = price;
+            user.fruit = undefined;
             user.save(function(err) { if (err) console.log(err); });
             let msg = message.reply(
               `updating your stonks on the stalk market (${price} bells) ${
