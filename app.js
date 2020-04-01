@@ -29,7 +29,35 @@ client.on("message", async message => {
   let hr = time.getHours();
   let day = time.getDay();
 
+  if (command === "fruit") {
+    if (!arg.length) {
+      let msg = '> Native fruits:\n';
+      User.find({}, null, { sort: { fruit: -1 } }, function(err, users) {
+        users.forEach(function(user) {
+          msg += "> **" + user.username + "**: " + user.fruit + "\n";
+        });
+        message.channel.send(msg);
+      });
+    } else if (arg == "peach" || arg == "orange" || arg == "apple" || arg == "pear" || arg == "cherry") {
+      User.findOne({ username: message.member.user.tag })
+        .then(user => {
+          if (user) {
+            user.fruit = arg.toString();
+            user.save(function(err) { if (err) console.log(err); });
+            let msg = message.reply(
+              `adding your native fruit ${arg} to the list!`
+            );
+          }
+        })
+    } else if (arg == "coconut") {
+      let msg = message.reply('coconuts are not real fruits');
+    } else {
+      await message.reply("please enter a valid native fruit (peach, orange, apple, pear, cherry)");
+    }
+  }
+
   if (command === "buying") {
+    let price = parseInt(arg, 10);
     // If no argument was passed, just post the price list without creating a new user.
     if (!arg.length) {
       let msg = `> The price of turnips that are being bought: __**(${mm}/${dd}) ${hr >= 12 ? `afternoon` : `morning`}**__\n`;
