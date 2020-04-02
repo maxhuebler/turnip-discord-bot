@@ -5,7 +5,7 @@ module.exports = {
   description:
     "Returns sorted list of current turnip prices set by users with !turnip {price}",
   execute(message, args) {
-    let time = new Date("EST");
+    let time = new Date();
     let dd = time.getDate();
     let mm = time.getMonth() + 1;
     let hr = time.getHours();
