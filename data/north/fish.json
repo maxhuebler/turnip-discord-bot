@@ -1,0 +1,562 @@
+[
+    {
+      "name":"Anchovy",
+      "price":200,
+      "seasonality":"All months",
+      "availability":"4 AM - 9 PM",
+      "location":"Sea"
+    },
+    {
+      "name":"Angelfish",
+      "price":3000,
+      "seasonality":"may, june, july, august, september, october",
+      "availability":"4 PM - 9 AM",
+      "location":"River"
+    },
+    {
+      "name":"Arapaima",
+      "price":10000,
+      "seasonality":"june, july, august, september",
+      "availability":"4 PM - 9 AM",
+      "location":"River"
+    },
+    {
+      "name":"Arowana",
+      "price":10000,
+      "seasonality":"june, july, august, september",
+      "availability":"4 PM - 9 AM",
+      "location":"River"
+    },
+    {
+      "name":"Barred Knifejaw",
+      "price":5000,
+      "seasonality":"march, april, may, june, july, august, september, october, november",
+      "availability":"All day",
+      "location":"Sea"
+    },
+    {
+      "name":"Barreleye",
+      "price":15000,
+      "seasonality":"All months",
+      "availability":"9 PM - 4 AM",
+      "location":"Sea"
+    },
+    {
+      "name":"Bettta",
+      "price":2500,
+      "seasonality":"may, june, july, august, september, october",
+      "availability":"9 AM - 4 PM",
+      "location":"River"
+    },
+    {
+      "name":"Bitterling",
+      "price":900,
+      "seasonality":"january, february, march, november, december",
+      "availability":"All day",
+      "location":"River"
+    },
+    {
+      "name":"Black Bass",
+      "price":400,
+      "seasonality":"All months",
+      "availability":"All day",
+      "location":"River"
+    },
+    {
+      "name":"Blowfish",
+      "price":5000,
+      "seasonality":"january, february, november, december",
+      "availability":"6 PM - 4 AM",
+      "location":"Sea"
+    },
+    {
+      "name":"Blue Marlin",
+      "price":10000,
+      "seasonality":"january, february, march, april, july, august, september, november, december",
+      "availability":"All day",
+      "location":"Pier"
+    },
+    {
+      "name":"Bluegill",
+      "price":180,
+      "seasonality":"All months",
+      "availability":"9 AM - 4 PM",
+      "location":"River"
+    },
+    {
+      "name":"Butterfly Fish",
+      "price":1000,
+      "seasonality":"april, may, june, july, august, september",
+      "availability":"All day",
+      "location":"Sea"
+    },
+    {
+      "name":"Carp",
+      "price":300,
+      "seasonality":"All months",
+      "availability":"All day",
+      "location":"Pond"
+    },
+    {
+      "name":"Catfish",
+      "price":800,
+      "seasonality":"may, june, july, august, september, october",
+      "availability":"4 PM - 9 AM",
+      "location":"Pond"
+    },
+    {
+      "name":"Char",
+      "price":3800,
+      "seasonality":"march, april, may, june, september, october, november",
+      "availability":"4 PM - 9 AM",
+      "location":"River (Clifftop)"
+    },
+    {
+      "name":"Cherry Salmon",
+      "price":1000,
+      "seasonality":"march, april, may, june, september, october, november",
+      "availability":"4 PM - 9 AM",
+      "location":"River (Clifftop)"
+    },
+    {
+      "name":"Clown Fish",
+      "price":650,
+      "seasonality":"april, may, june, july, august, september",
+      "availability":"All day",
+      "location":"Sea"
+    },
+    {
+      "name":"Coelacanth",
+      "price":15000,
+      "seasonality":"All months",
+      "availability":"All day",
+      "location":"Sea (Rainy Days)"
+    },
+    {
+      "name":"Crawfish",
+      "price":200,
+      "seasonality":"april, may, june, july, august, september",
+      "availability":"All day",
+      "location":"River"
+    },
+    {
+      "name":"Crucian Carp",
+      "price":160,
+      "seasonality":"All months",
+      "availability":"All day",
+      "location":"River"
+    },
+    {
+      "name":"Dab",
+      "price":300,
+      "seasonality":"january, february, march, april, october, november, december",
+      "availability":"All day",
+      "location":"Sea"
+    },
+    {
+      "name":"Dace",
+      "price":240,
+      "seasonality":"All months",
+      "availability":"4 PM - 9 AM",
+      "location":"River"
+    },
+    {
+      "name":"Dorado",
+      "price":15000,
+      "seasonality":"june, july, august, september",
+      "availability":"4 AM - 9 PM",
+      "location":"River"
+    },
+    {
+      "name":"Football Fish",
+      "price":2500,
+      "seasonality":"january, february, march, november, december",
+      "availability":"4 PM - 9 AM",
+      "location":"Sea"
+    },
+    {
+      "name":"Freshwater Goby",
+      "price":400,
+      "seasonality":"All months",
+      "availability":"4 PM - 9 AM",
+      "location":"River"
+    },
+    {
+      "name":"Frog",
+      "price":120,
+      "seasonality":"may, june, july, august",
+      "availability":"All day",
+      "location":"Pond"
+    },
+    {
+      "name":"Gar",
+      "price":6000,
+      "seasonality":"june, july, august, september",
+      "availability":"4 PM - 9 AM",
+      "location":"Pond"
+    },
+    {
+      "name":"Giant Snakehead",
+      "price":5500,
+      "seasonality":"june, july, august",
+      "availability":"9 AM - 4 PM",
+      "location":"Pond"
+    },
+    {
+      "name":"Giant Trevally",
+      "price":4500,
+      "seasonality":"may, june, july, august, september",
+      "availability":"All day",
+      "location":"Pier"
+    },
+    {
+      "name":"Golden Trout",
+      "price":15000,
+      "seasonality":"march, april, may, september, october, november",
+      "availability":"4 PM - 9 AM",
+      "location":"River (Clifftop)"
+    },
+    {
+      "name":"Goldfish",
+      "price":1300,
+      "seasonality":"All months",
+      "availability":"All day",
+      "location":"Pond"
+    },
+    {
+      "name":"Great White Shark",
+      "price":15000,
+      "seasonality":"june, july, august, september",
+      "availability":"4 PM - 9 AM",
+      "location":"Sea"
+    },
+    {
+      "name":"Guppy",
+      "price":1300,
+      "seasonality":"april, may, june, july, august, september, october, november",
+      "availability":"9 AM - 4 PM",
+      "location":"River"
+    },
+    {
+      "name":"Hammerhead Shark",
+      "price":8000,
+      "seasonality":"june, july, august, september",
+      "availability":"4 PM - 9 AM",
+      "location":"Sea"
+    },
+    {
+      "name":"Horse Mackerel",
+      "price":150,
+      "seasonality":"All months",
+      "availability":"All day",
+      "location":"Sea"
+    },
+    {
+      "name":"Killifish",
+      "price":300,
+      "seasonality":"april, may, june, july, august",
+      "availability":"All day",
+      "location":"Pond"
+    },
+    {
+      "name":"King Salmon",
+      "price":1800,
+      "seasonality":"september",
+      "availability":"All day",
+      "location":"River (mouth)"
+    },
+    {
+      "name":"Koi",
+      "price":4000,
+      "seasonality":"All months",
+      "availability":"4 PM - 9 AM",
+      "location":"Pond"
+    },
+    {
+      "name":"Loach",
+      "price":400,
+      "seasonality":"march, april, may",
+      "availability":"All day",
+      "location":"River"
+    },
+    {
+      "name":"Mahi-mahi",
+      "price":6000,
+      "seasonality":"may, june, july, august, september, october",
+      "availability":"All day",
+      "location":"Pier"
+    },
+    {
+      "name":"Mitten Crab",
+      "price":2000,
+      "seasonality":"september, october, november",
+      "availability":"4 PM - 9 AM",
+      "location":"River"
+    },
+    {
+      "name":"Moray Eel",
+      "price":2000,
+      "seasonality":"august, september, october",
+      "availability":"All day",
+      "location":"Sea"
+    },
+    {
+      "name":"Napoleonfish",
+      "price":10000,
+      "seasonality":"july, august",
+      "availability":"4 AM - 9 PM",
+      "location":"Sea"
+    },
+    {
+      "name":"Neon Tetra",
+      "price":500,
+      "seasonality":"april, may, june, july, august, september, october, november",
+      "availability":"9 AM - 4 PM",
+      "location":"River"
+    },
+    {
+      "name":"Nibble Fish",
+      "price":1500,
+      "seasonality":"may, june, july, august, september",
+      "availability":"9 AM - 4 PM",
+      "location":"River"
+    },
+    {
+      "name":"Oarfish",
+      "price":9000,
+      "seasonality":"january, february, march, april, may, december",
+      "availability":"All day",
+      "location":"Sea"
+    },
+    {
+      "name":"Ocean Sunfish",
+      "price":4000,
+      "seasonality":"july, august, september",
+      "availability":"4 AM - 9 PM",
+      "location":"Sea"
+    },
+    {
+      "name":"Olive Flounder",
+      "price":800,
+      "seasonality":"All months",
+      "availability":"All day",
+      "location":"Sea"
+    },
+    {
+      "name":"Pale Chub",
+      "price":160,
+      "seasonality":"All months",
+      "availability":"9 AM - 4 PM",
+      "location":"River"
+    },
+    {
+      "name":"Pike",
+      "price":1800,
+      "seasonality":"september, october, november, december",
+      "availability":"All day",
+      "location":"River"
+    },
+    {
+      "name":"Piranha",
+      "price":2500,
+      "seasonality":"june, july, august, september",
+      "availability":"9 AM - 4 PM",
+      "location":"River"
+    },
+    {
+      "name":"Pond Smelt",
+      "price":300,
+      "seasonality":"january, february, december",
+      "availability":"All day",
+      "location":"River"
+    },
+    {
+      "name":"Pop-eyed Goldfish",
+      "price":1300,
+      "seasonality":"All months",
+      "availability":"9 AM - 4 PM",
+      "location":"Pond"
+    },
+    {
+      "name":"Puffer Fish",
+      "price":250,
+      "seasonality":"july, august, september",
+      "availability":"All day",
+      "location":"Sea"
+    },
+    {
+      "name":"Rainbowfish",
+      "price":800,
+      "seasonality":"may, june, july, august, september, october",
+      "availability":"9 AM - 4 PM",
+      "location":"River"
+    },
+    {
+      "name":"Ranchu Goldfish",
+      "price":4500,
+      "seasonality":"All months",
+      "availability":"9 AM - 4 PM",
+      "location":"Pond"
+    },
+    {
+      "name":"Ray",
+      "price":3000,
+      "seasonality":"august, september, october, november",
+      "availability":"4 AM - 9 PM",
+      "location":"Sea"
+    },
+    {
+      "name":"Red Snapper",
+      "price":3000,
+      "seasonality":"All months",
+      "availability":"All day",
+      "location":"Sea"
+    },
+    {
+      "name":"Ribbon Eel",
+      "price":600,
+      "seasonality":"june, july, august, september, october",
+      "availability":"All day",
+      "location":"Sea"
+    },
+    {
+      "name":"Saddled Bichir",
+      "price":4000,
+      "seasonality":"june, july, august, september",
+      "availability":"9 PM - 4 AM",
+      "location":"River"
+    },
+    {
+      "name":"Salmon",
+      "price":700,
+      "seasonality":"september",
+      "availability":"All day",
+      "location":"River (mouth)"
+    },
+    {
+      "name":"Saw Shark",
+      "price":12000,
+      "seasonality":"june, july, august, september",
+      "availability":"4 PM - 9 AM",
+      "location":"Sea"
+    },
+    {
+      "name":"Sea Bass",
+      "price":400,
+      "seasonality":"All months",
+      "availability":"All day",
+      "location":"Sea"
+    },
+    {
+      "name":"Sea Butterfly",
+      "price":1000,
+      "seasonality":"january, february, march, december",
+      "availability":"All day",
+      "location":"Sea"
+    },
+    {
+      "name":"Seahorse",
+      "price":1100,
+      "seasonality":"april, may, june, july, august, september, october, november",
+      "availability":"All day",
+      "location":"Sea"
+    },
+    {
+      "name":"Snapping Turtle",
+      "price":5000,
+      "seasonality":"april, may, june, july, august, september, october",
+      "availability":"9 AM - 4 AM",
+      "location":"River"
+    },
+    {
+      "name":"Soft-shelled Turtle",
+      "price":3750,
+      "seasonality":"august, september",
+      "availability":"4 PM - 9 AM",
+      "location":"River"
+    },
+    {
+      "name":"Squid",
+      "price":500,
+      "seasonality":"january, february, march, april, may, june, july, august, december",
+      "availability":"All day",
+      "location":"Sea"
+    },
+    {
+      "name":"Stringfish",
+      "price":15000,
+      "seasonality":"january, february, march, december",
+      "availability":"4 PM - 9 AM",
+      "location":"River (Clifftop)"
+    },
+    {
+      "name":"Sturgeon",
+      "price":10000,
+      "seasonality":"january, february, march, september, october, november, december",
+      "availability":"All day",
+      "location":"River (Mouth)"
+    },
+    {
+      "name":"Suckerfisk",
+      "price":1500,
+      "seasonality":"june, july, august, september",
+      "availability":"All day",
+      "location":"Sea"
+    },
+    {
+      "name":"Surgeonfish",
+      "price":1000,
+      "seasonality":"april, may, june, july, august, september",
+      "availability":"All day",
+      "location":"Sea"
+    },
+    {
+      "name":"Sweetfish",
+      "price":900,
+      "seasonality":"july, august, september",
+      "availability":"All day",
+      "location":"River"
+    },
+    {
+      "name":"Tadpole",
+      "price":100,
+      "seasonality":"march, april, may, june, july",
+      "availability":"All day",
+      "location":"Pond"
+    },
+    {
+      "name":"Tilapia",
+      "price":800,
+      "seasonality":"june, july, august, september, october",
+      "availability":"All day",
+      "location":"River"
+    },
+    {
+      "name":"Tuna",
+      "price":7000,
+      "seasonality":"january, february, march, april, november, december",
+      "availability":"All day",
+      "location":"Pier"
+    },
+    {
+      "name":"Whale Shark",
+      "price":13000,
+      "seasonality":"june, july, august, september",
+      "availability":"All day",
+      "location":"Sea"
+    },
+    {
+      "name":"Yellow Perch",
+      "price":300,
+      "seasonality":"january, february, march, october, november, december",
+      "availability":"All day",
+      "location":"River"
+    },
+    {
+      "name":"Zebra Turkeyfish",
+      "price":500,
+      "seasonality":"april, may, june, july, august, september, october, november",
+      "availability":"All day",
+      "location":"Sea"
+    }
+  ]
