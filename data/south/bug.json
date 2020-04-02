@@ -1,0 +1,562 @@
+[
+  {
+    "name":"Agrias Butterfly",
+    "price":3000,
+    "seasonality":"april, may, june, july, august, september",
+    "availability":"8 AM - 5 PM",
+    "location":"Flying"
+  },
+  {
+    "name":"Ant",
+    "price":80,
+    "seasonality":"All months",
+    "availability":"All day",
+    "location":"On rotten turnips and fruit"
+  },
+  {
+    "name":"Atlas Moth",
+    "price":3000,
+    "seasonality":"april, may, june, july, august, september",
+    "availability":"7 PM - 4 AM",
+    "location":"On trees"
+  },
+  {
+    "name":"Bagworm",
+    "price":600,
+    "seasonality":"All months",
+    "availability":"All day",
+    "location":"Shaking trees"
+  },
+  {
+    "name":"Banded Dragonfly",
+    "price":4500,
+    "seasonality":"may, june, july, august, september, october",
+    "availability":"8 AM - 5 PM",
+    "location":"Flying"
+  },
+  {
+    "name":"Bell Cricket",
+    "price":430,
+    "seasonality":"september, october",
+    "availability":"5 PM - 8 AM",
+    "location":"In grass"
+  },
+  {
+    "name":"Blue Weevil Beetle",
+    "price":800,
+    "seasonality":"july, august",
+    "availability":"All day",
+    "location":"On trees"
+  },
+  {
+    "name":"Brown Cicada",
+    "price":250,
+    "seasonality":"july, august",
+    "availability":"8 AM - 5 PM",
+    "location":"On trees"
+  },
+  {
+    "name":"Centipede",
+    "price":300,
+    "seasonality":"january, february, march, april, may, june, september, october, november, december",
+    "availability":"4 PM - 11 PM",
+    "location":"Hitting rocks"
+  },
+  {
+    "name":"Cicada Shell",
+    "price":10,
+    "seasonality":"july, august",
+    "availability":"All day",
+    "location":"On trees"
+  },
+  {
+    "name":"Citrus Long-horned Beetle",
+    "price":350,
+    "seasonality":"All months",
+    "availability":"All day",
+    "location":"Tree stumps"
+  },
+  {
+    "name":"Common Bluebottle",
+    "price":300,
+    "seasonality":"april, may, june, july, august",
+    "availability":"4 AM - 7 PM",
+    "location":"Flying"
+  },
+  {
+    "name":"Common Butterfly",
+    "price":160,
+    "seasonality":"january, february, march, april, may, june, september, october, november, december",
+    "availability":"4 AM - 7 PM",
+    "location":"Flowers"
+  },
+  {
+    "name":"Cricket",
+    "price":130,
+    "seasonality":"september, october, november",
+    "availability":"5 PM - 8 AM",
+    "location":"In grass"
+  },
+  {
+    "name":"Cyclommatus Stag",
+    "price":8000,
+    "seasonality":"july, august",
+    "availability":"5 PM - 8 AM",
+    "location":"On trees"
+  },
+  {
+    "name":"Damselfly",
+    "price":500,
+    "seasonality":"january, february, november, december",
+    "availability":"All day",
+    "location":"Flying"
+  },
+  {
+    "name":"Darner Dragonfly",
+    "price":230,
+    "seasonality":"april, may, june, july, august, september, october",
+    "availability":"8 AM - 5 PM",
+    "location":"Flying"
+  },
+  {
+    "name":"Diving Beetle",
+    "price":800,
+    "seasonality":"may, june, july, august, september",
+    "availability":"8 AM - 7 PM",
+    "location":"In rivers"
+  },
+  {
+    "name":"Drone Beetle",
+    "price":200,
+    "seasonality":"june, july, august",
+    "availability":"All day",
+    "location":"On trees"
+  },
+  {
+    "name":"Dung Beetle",
+    "price":3000,
+    "seasonality":"january, february, december",
+    "availability":"All day",
+    "location":"Ground"
+  },
+  {
+    "name":"Earth-boring Dung Beetle",
+    "price":300,
+    "seasonality":"july, august, september",
+    "availability":"All day",
+    "location":"Ground"
+  },
+  {
+    "name":"Emperor Butterfly",
+    "price":4000,
+    "seasonality":"january, february, march, june, july, august, september, december",
+    "availability":"5 PM - 8 AM",
+    "location":"Flying"
+  },
+  {
+    "name":"Evening Cicada",
+    "price":550,
+    "seasonality":"july, august",
+    "availability":"4 AM - 8 AM",
+    "location":"On trees"
+  },
+  {
+    "name":"Firefly",
+    "price":300,
+    "seasonality":"june",
+    "availability":"7 PM - 4 AM",
+    "location":"Above freshwater"
+  },
+  {
+    "name":"Flea",
+    "price":70,
+    "seasonality":"april, may, june, july, august, september, october, november",
+    "availability":"All day",
+    "location":"On flea-infested villagers"
+  },
+  {
+    "name":"Fly",
+    "price":60,
+    "seasonality":"All months",
+    "availability":"All day",
+    "location":"On rotten food and garbage"
+  },
+  {
+    "name":"Giant Cicada",
+    "price":500,
+    "seasonality":"july, august",
+    "availability":"8 AM - 5 PM",
+    "location":"On trees"
+  },
+  {
+    "name":"Giant Stag",
+    "price":10000,
+    "seasonality":"july, august",
+    "availability":"11 PM - 8 AM",
+    "location":"On trees"
+  },
+  {
+    "name":"Giant Water Beetle",
+    "price":2000,
+    "seasonality":"may, june, july, august, september",
+    "availability":"7 PM - 8 AM",
+    "location":"Ponds and rivers"
+  },
+  {
+    "name":"Giraffe Stag",
+    "price":12000,
+    "seasonality":"july, august",
+    "availability":"5 PM - 8 AM",
+    "location":"On trees"
+  },
+  {
+    "name":"Golden Stag",
+    "price":12000,
+    "seasonality":"july, august",
+    "availability":"5 PM - 8 AM",
+    "location":"On trees"
+  },
+  {
+    "name":"Goliath Beetle",
+    "price":8000,
+    "seasonality":"june, july, august, september",
+    "availability":"5 PM - 8 AM",
+    "location":"On trees"
+  },
+  {
+    "name":"Grasshopper",
+    "price":160,
+    "seasonality":"july, august, september",
+    "availability":"8 AM - 5 PM",
+    "location":"In grass"
+  },
+  {
+    "name":"Great Purple Emperor",
+    "price":3000,
+    "seasonality":"may, june, july, august",
+    "availability":"4 AM - 7 PM",
+    "location":"Flying"
+  },
+  {
+    "name":"Hermit Crab",
+    "price":1000,
+    "seasonality":"All months",
+    "availability":"7 PM - 8 AM",
+    "location":"On beach"
+  },
+  {
+    "name":"Honeybee",
+    "price":200,
+    "seasonality":"march, april, may, june, july",
+    "availability":"8 AM - 5 PM",
+    "location":"Flowers"
+  },
+  {
+    "name":"Horned Atlas",
+    "price":8000,
+    "seasonality":"july, august",
+    "availability":"5 PM - 8 AM",
+    "location":"On trees"
+  },
+  {
+    "name":"Horned Dynastid",
+    "price":1350,
+    "seasonality":"july, august",
+    "availability":"5 PM - 8 AM",
+    "location":"On trees"
+  },
+  {
+    "name":"Horned Elephant",
+    "price":8000,
+    "seasonality":"july, august",
+    "availability":"5 PM - 8 AM",
+    "location":"On trees"
+  },
+  {
+    "name":"Horned Hercules",
+    "price":12000,
+    "seasonality":"july, august",
+    "availability":"5 PM - 8 AM",
+    "location":"On trees"
+  },
+  {
+    "name":"Jewel Beetle",
+    "price":2400,
+    "seasonality":"april, may, june, july, august",
+    "availability":"All day",
+    "location":"On trees"
+  },
+  {
+    "name":"Ladybug",
+    "price":200,
+    "seasonality":"march, april, may, june, october",
+    "availability":"8 AM - 5 PM",
+    "location":"Flowers"
+  },
+  {
+    "name":"Long Locust",
+    "price":200,
+    "seasonality":"april, may, june, july, august, september, october, november",
+    "availability":"8 AM - 7 PM",
+    "location":"In grass"
+  },
+  {
+    "name":"Madagascan Sunset Moth",
+    "price":2500,
+    "seasonality":"april, may, june, july, august, september",
+    "availability":"8 AM - 4 PM",
+    "location":"Flying"
+  },
+  {
+    "name":"Man-faced Stink Bug",
+    "price":1000,
+    "seasonality":"march, april, may, june, july, august, september, october",
+    "availability":"7 PM - 8 AM",
+    "location":"Flowers"
+  },
+  {
+    "name":"Mantis",
+    "price":430,
+    "seasonality":"march, april, may, june, july, august, september, october, november",
+    "availability":"8 AM - 5 PM",
+    "location":"Flowers"
+  },
+  {
+    "name":"Migratory Locust",
+    "price":600,
+    "seasonality":"august, september, october, november",
+    "availability":"8 AM - 7 PM",
+    "location":"In grass"
+  },
+  {
+    "name":"Miyama Stag",
+    "price":1000,
+    "seasonality":"july, august",
+    "availability":"All day",
+    "location":"On trees"
+  },
+  {
+    "name":"Mole Cricket",
+    "price":500,
+    "seasonality":"january, february, march, april, may, november, december",
+    "availability":"All day",
+    "location":"Underground"
+  },
+  {
+    "name":"Monarch Butterfly",
+    "price":140,
+    "seasonality":"september, october, november",
+    "availability":"4 AM - 5 PM",
+    "location":"Flying"
+  },
+  {
+    "name":"Mosquito",
+    "price":130,
+    "seasonality":"june, july, august, september",
+    "availability":"5 PM - 4 AM",
+    "location":"Flying"
+  },
+  {
+    "name":"Moth",
+    "price":130,
+    "seasonality":"All months",
+    "availability":"7 PM - 4 AM",
+    "location":"Around light"
+  },
+  {
+    "name":"Orchid Mantis",
+    "price":2400,
+    "seasonality":"march, april, may, june, july, august, september, october, november",
+    "availability":"8 AM - 5 PM",
+    "location":"Flowers"
+  },
+  {
+    "name":"Paper Kite Butterfly",
+    "price":1000,
+    "seasonality":"All months",
+    "availability":"8 AM - 7 PM",
+    "location":"Flying"
+  },
+  {
+    "name":"Peacock Butterfly",
+    "price":2500,
+    "seasonality":"march, april, may, june",
+    "availability":"4 AM - 7 PM",
+    "location":"Flowers (Blue, Black, Purple)"
+  },
+  {
+    "name":"Pillbug",
+    "price":250,
+    "seasonality":"january, february, march, april, may, june, september, october, november, december",
+    "availability":"11 PM - 4 PM",
+    "location":"Hitting rocks"
+  },
+  {
+    "name":"Pondskater",
+    "price":130,
+    "seasonality":"may, june, july, august, september",
+    "availability":"8 AM - 7 PM",
+    "location":"In rivers"
+  },
+  {
+    "name":"Queen Alexandra's Birdwing",
+    "price":3000,
+    "seasonality":"may, june, july, august, september",
+    "availability":"8 AM - 4 PM",
+    "location":"Flying"
+  },
+  {
+    "name":"Rainbow Stag",
+    "price":6000,
+    "seasonality":"june, july, august, september",
+    "availability":"7 PM - 8 AM",
+    "location":"On trees"
+  },
+  {
+    "name":"Rajah Brooke's Birdwing",
+    "price":2500,
+    "seasonality":"january, february, april, may, june, july, august, september, december",
+    "availability":"8 AM - 5 PM",
+    "location":"Flowers (Blue, Black, Purple)"
+  },
+  {
+    "name":"Red Dragonfly",
+    "price":180,
+    "seasonality":"september, october",
+    "availability":"8 AM - 7 PM",
+    "location":"Flying"
+  },
+  {
+    "name":"Rice Grasshopper",
+    "price":160,
+    "seasonality":"august, september, october, november",
+    "availability":"8 AM - 7 PM",
+    "location":"In grass"
+  },
+  {
+    "name":"Robust Cicada",
+    "price":300,
+    "seasonality":"july, august",
+    "availability":"8 AM - 5 PM",
+    "location":"On trees"
+  },
+  {
+    "name":"Rosalia Batesi Beetle",
+    "price":3000,
+    "seasonality":"may, june, july, august, september",
+    "availability":"All day",
+    "location":"Tree stumps"
+  },
+  {
+    "name":"Saw Stag",
+    "price":2000,
+    "seasonality":"july, august",
+    "availability":"All day",
+    "location":"On trees"
+  },
+  {
+    "name":"Scarab Beetle",
+    "price":10000,
+    "seasonality":"july, august",
+    "availability":"11 PM - 8 AM",
+    "location":"On trees"
+  },
+  {
+    "name":"Scorpion",
+    "price":8000,
+    "seasonality":"may, june, july, august, september, october",
+    "availability":"7 PM - 4 AM",
+    "location":"Ground"
+  },
+  {
+    "name":"Snail",
+    "price":250,
+    "seasonality":"All months",
+    "availability":"All day",
+    "location":"On rocks"
+  },
+  {
+    "name":"Spider",
+    "price":600,
+    "seasonality":"All months",
+    "availability":"7 PM - 8 AM",
+    "location":"Shaking trees"
+  },
+  {
+    "name":"Stinkbug",
+    "price":120,
+    "seasonality":"march, april, may, june, july, august, september, october",
+    "availability":"All day",
+    "location":"On trees"
+  },
+  {
+    "name":"Tarantula",
+    "price":8000,
+    "seasonality":"january, february, march, april, november, december",
+    "availability":"7 PM - 4 AM",
+    "location":"Ground"
+  },
+  {
+    "name":"Tiger Beetle",
+    "price":1500,
+    "seasonality":"february, march, april, may, june, july, august, september, october",
+    "availability":"All day",
+    "location":"Flying"
+  },
+  {
+    "name":"Tiger Butterfly",
+    "price":240,
+    "seasonality":"march, april, may, june, july, august, september",
+    "availability":"4 AM - 7 PM",
+    "location":"Flying"
+  },
+  {
+    "name":"Violin Beetle",
+    "price":450,
+    "seasonality":"may, june, september, october, november",
+    "availability":"All day",
+    "location":"On trees"
+  },
+  {
+    "name":"Walker Cicada",
+    "price":400,
+    "seasonality":"august, september",
+    "availability":"8 AM - 5 PM",
+    "location":"On trees"
+  },
+  {
+    "name":"Walking Leaf",
+    "price":600,
+    "seasonality":"july, august, september",
+    "availability":"All day",
+    "location":"On ground by trees"
+  },
+  {
+    "name":"Walking Stick",
+    "price":600,
+    "seasonality":"july, august, september, october, november",
+    "availability":"4 AM - 8 AM",
+    "location":"On trees"
+  },
+  {
+    "name":"Wasp",
+    "price":2500,
+    "seasonality":"All months",
+    "availability":"All day",
+    "location":"Shaking trees"
+  },
+  {
+    "name":"Wharf Roach",
+    "price":200,
+    "seasonality":"All months",
+    "availability":"All day",
+    "location":"On beach rocks"
+  },
+  {
+    "name":"Yellow Butterfly",
+    "price":160,
+    "seasonality":"march, april, may, june, september, october",
+    "availability":"4 AM - 7 PM",
+    "location":"Flying"
+  }
+]
