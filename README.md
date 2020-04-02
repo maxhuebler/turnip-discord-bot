@@ -11,17 +11,13 @@ The working procedure is crudely described below:
 - Fetches relevant data from [MongoDB Atlas](https://www.mongodb.com/cloud/atlas) and sends it back to the server channel.
 
 ### Commands
-Passing the commands below with no arguments will print out a sorted list of relevant data from users in the server. If a user passes in an argument, the bot will then update their price of turnips or native fruit respectively.
 ```
-!buying {price}
-!fruit {fruit}
-!shells {price}
-!request {highest | {username}}
-```
-These commands allow the user to specify and sort a list of fish or bugs by location, price, and availability.
-```
-!fish {month} {location | price | time}
-!bugs {month} {location | price | time}
+!buying <price>
+!fruit <fruit>
+!shells <price>
+!request <highest | username>
+!fish <month> <location | price | time>
+!bugs <month> <location | price | time>
 ```
 
 ### How to set up
