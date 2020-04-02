@@ -16,6 +16,7 @@ Passing the commands below with no arguments will print out a sorted list of rel
 !buying {price}
 !fruit {fruit}
 !shells {price}
+!request {highest | {username}}
 ```
 These commands allow the user to specify and sort a list of fish or bugs by location, price, and availability.
 ```

@@ -51,6 +51,7 @@ module.exports = {
           } else {
             const user = new User({
               username: message.member.user.tag,
+              snowflake: message.member.user.id,
               bells: isNaN(price) ? 0 : price
             });
             user.save().catch(err => console.log(err));
