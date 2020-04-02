@@ -11,4 +11,4 @@ const FishSchema = mongoose.Schema(
   { versionKey: false }
 );
 
-module.exports = mongoose.model("Fish", FishSchema);
+module.exports = mongoose.model("Fishes", FishSchema);

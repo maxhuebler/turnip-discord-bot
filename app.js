@@ -1,16 +1,18 @@
 require("dotenv").config();
 const Discord = require("discord.js");
 const mongoose = require("mongoose");
-const fs = require('fs');
+const fs = require("fs");
 
 const client = new Discord.Client();
 client.commands = new Discord.Collection();
 
-const commandFiles = fs.readdirSync('./commands').filter(file => file.endsWith('.js'));
+const commandFiles = fs
+  .readdirSync("./commands")
+  .filter(file => file.endsWith(".js"));
 
 for (const file of commandFiles) {
-	const command = require(`./commands/${file}`);
-	client.commands.set(command.name, command);
+  const command = require(`./commands/${file}`);
+  client.commands.set(command.name, command);
 }
 
 client.on("ready", () => {
@@ -27,11 +29,13 @@ client.on("message", async message => {
   const command = args.shift();
 
   if (command === "fish") {
-    client.commands.get('fish').execute(message, args);
+    client.commands.get("fish").execute(message, args);
+  } else if (command === "bug") {
+    client.commands.get("bug").execute(message, args);
   } else if (command === "fruit") {
-    client.commands.get('fruit').execute(message, args);
+    client.commands.get("fruit").execute(message, args);
   } else if (command === "buying") {
-    client.commands.get('buying').execute(message, args);
+    client.commands.get("buying").execute(message, args);
   }
 });
 
