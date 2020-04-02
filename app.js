@@ -36,6 +36,8 @@ client.on("message", async message => {
     client.commands.get("fruit").execute(message, args);
   } else if (command === "buying") {
     client.commands.get("buying").execute(message, args);
+  } else if (command === "shells") {
+    client.commands.get("shells").execute(message, args);
   }
 });
 

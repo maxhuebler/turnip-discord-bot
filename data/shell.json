@@ -1,0 +1,54 @@
+[
+  {
+    "name":"Conch",
+    "price":700
+  },
+  {
+    "name":"Coral",
+    "price":250
+  },
+  {
+    "name":"Cowrie",
+    "price":60
+  },
+  {
+    "name":"Giant Clam",
+    "price":450
+  },
+  {
+    "name":"Manila Clam",
+    "price":100
+  },
+  {
+    "name":"Oyster Shell",
+    "price":450
+  },
+  {
+    "name":"Pearl Oyster",
+    "price":1200
+  },
+  {
+    "name":"Porceletta",
+    "price":30
+  },
+  {
+    "name":"Sand Dollar",
+    "price":120
+  },
+  {
+    "name":"Sea Snail",
+    "price":180
+  },
+  {
+    "name":"Scallop Shell",
+    "price":600
+  },
+  {
+    "name":"Venus Comb",
+    "price":150
+  },
+  {
+    "name":"White Scallop",
+    "price":450
+  }
+]

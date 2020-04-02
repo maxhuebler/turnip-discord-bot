@@ -1,5 +1,5 @@
 # Turnip Stalk Bot
-Helper chatbot for displaying useful information such as turnip prices, native fruit, fish and bug prices, seasonality, availability, and location to all users in a server
+Helper chatbot for displaying useful information such as turnip prices, native fruit, fish and bug prices, seasonality, availability, and location to all users in the server
 
 This discord bot came from the idea, to alleviate the need to ask all my friends twice a day for their current prices.
 
@@ -11,10 +11,11 @@ The working procedure is crudely described below:
 - Fetches relevant data from [MongoDB Atlas](https://www.mongodb.com/cloud/atlas) and sends it back to the server channel.
 
 ### Commands
-Passing the commands below with no arguments will print out a list of relevant data from users in a server. If a user passes in an argument, the bot will then update their price of turnips or native fruit respectively.
+Passing the commands below with no arguments will print out a sorted list of relevant data from users in the server. If a user passes in an argument, the bot will then update their price of turnips or native fruit respectively.
 ```
 !buying {price}
 !fruit {fruit}
+!shells {price}
 ```
 These commands allow the user to specify and sort a list of fish or bugs by location, price, and availability.
 ```
