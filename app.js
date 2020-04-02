@@ -28,16 +28,13 @@ client.on("message", async message => {
   let args = message.content.slice("!".length).split(" ");
   const command = args.shift();
 
-  if (command === "fish") {
-    client.commands.get("fish").execute(message, args);
-  } else if (command === "bugs") {
-    client.commands.get("bugs").execute(message, args);
-  } else if (command === "fruit") {
-    client.commands.get("fruit").execute(message, args);
-  } else if (command === "buying") {
-    client.commands.get("buying").execute(message, args);
-  } else if (command === "shells") {
-    client.commands.get("shells").execute(message, args);
+  if (!client.commands.has(command)) return;
+
+  try {
+    client.commands.get(command).execute(message, args);
+  } catch (err) {
+    console.log(err);
+    message.reply("there was an err trying to execute that command!");
   }
 });
 
