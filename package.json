@@ -2,7 +2,7 @@
   "name": "turnip-stonks",
   "license": "MIT",
   "version": "1.0.0",
-  "description": "Discord bot for Animal Crossing that allows people to keep track of turnip prices",
+  "description": "Discord bot for Animal Crossing: New Horizon",
   "author": "Max Huebler",
   "scripts": {
     "start": "node app.js"
