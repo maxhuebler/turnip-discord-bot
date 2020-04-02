@@ -16,12 +16,20 @@ module.exports = {
       let msg = `> The price of turnips that are being bought: __**(${mm}/${dd}) ${
         hr >= 12 ? `afternoon` : `morning`
       }**__\n`;
+      let headerLength = msg.length;
       User.find({}, null, { sort: { bells: -1 } }, function(err, users) {
         users.forEach(function(user) {
-          msg +=
+          if (user.bells != 0) {
+            msg +=
             "> **" + user.username + "**: " + user.bells + " bells " + "\n";
+          } 
         });
-        message.channel.send(msg);
+        if (headerLength == msg.length) {
+          message.channel.send(msg + `> __No prices have been inputed yet this ${
+            hr >= 12 ? `afternoon` : `morning`}__`);
+        } else {
+          message.channel.send(msg);
+        }
       });
       // Argsument was passed to the buying command
     } else if (price >= 15 && price <= 800) {
