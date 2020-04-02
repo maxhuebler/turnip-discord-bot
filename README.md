@@ -1,4 +1,4 @@
-# Turnip Stalk Bot
+# Turnip Discord Bot
 Helper chatbot for displaying useful information such as turnip prices, native fruit, fish and bug prices, seasonality, availability, and location to all users in the server
 
 This discord bot came from the idea, to alleviate the need to ask all my friends twice a day for their current prices.
