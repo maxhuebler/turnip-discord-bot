@@ -2,8 +2,8 @@ const User = require("../models/User");
 
 module.exports = {
   name: "fruit",
-  description:
-    "Returns sorted list of native fruit set by users with !fruit {peach|orange|apple|pear|cherry}",
+  description: "Returns a sorted list of users native fruits by type",
+  usage: "<fruit>",
   execute(message, args) {
     if (!args.length) {
       let msg = "> Native fruits:\n";
@@ -33,7 +33,7 @@ module.exports = {
       });
     } else {
       message.reply(
-        "please enter a valid native fruit (peach, orange, apple, pear, cherry)"
+        "please enter a valid argument !fruit <peach | orange | apple | pear | cherry>"
       );
     }
   }

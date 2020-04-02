@@ -2,8 +2,8 @@ const User = require("../models/User");
 
 module.exports = {
   name: "buying",
-  description:
-    "Returns sorted list of current turnip prices set by users with !turnip {price}",
+  description: "Returns a sorted list of current turnip prices",
+  usage: "<price>",
   execute(message, args) {
     let time = new Date();
     let dd = time.getDate();
@@ -21,12 +21,16 @@ module.exports = {
         users.forEach(function(user) {
           if (user.bells != 0) {
             msg +=
-            "> **" + user.username + "**: " + user.bells + " bells " + "\n";
-          } 
+              "> **" + user.username + "**: " + user.bells + " bells " + "\n";
+          }
         });
         if (headerLength == msg.length) {
-          message.channel.send(msg + `> __No prices have been inputed yet this ${
-            hr >= 12 ? `afternoon` : `morning`}__`);
+          message.channel.send(
+            msg +
+              `> __No prices have been inputed yet this ${
+                hr >= 12 ? `afternoon` : `morning`
+              }__`
+          );
         } else {
           message.channel.send(msg);
         }
@@ -62,7 +66,7 @@ module.exports = {
         })
         .catch(err => console.log(err));
     } else {
-      message.reply("please enter a valid number from 15 to 800.");
+      message.reply("please enter a valid argument from 15 to 800.");
     }
   }
 };

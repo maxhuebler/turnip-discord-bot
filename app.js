@@ -26,15 +26,25 @@ client.on("ready", () => {
 client.on("message", async message => {
   if (!message.content.startsWith("!") || message.author.bot) return;
   let args = message.content.slice("!".length).split(" ");
-  const command = args.shift();
+  const commandName = args.shift().toLowerCase();
 
-  if (!client.commands.has(command)) return;
+  if (!client.commands.has(commandName)) return;
+
+  const command = client.commands.get(commandName);
+
+  if (command.args && !args.length) {
+    let reply = `You didn't provide any arguments, ${message.author}!`;
+    if (command.usage) {
+      reply += `\nThe proper usage would be: \`!${command.name} ${command.usage}\``;
+    }
+    return message.channel.send(reply);
+  }
 
   try {
-    client.commands.get(command).execute(message, args);
+    command.execute(message, args);
   } catch (err) {
     console.log(err);
-    message.reply("there was an err trying to execute that command!");
+    message.reply("there was an error trying to execute that command!");
   }
 });
 

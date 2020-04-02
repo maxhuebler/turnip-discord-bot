@@ -2,8 +2,8 @@ const Shells = require("../models/Shell");
 
 module.exports = {
   name: "shells",
-  description:
-    "Returns sorted list of shells by name or price with !shells {price}",
+  description: "Returns a sorted list of shells by name or price",
+  usage: "<price>",
   execute(message, args) {
     if (!args.length) {
       let msg = `> All shells that can be found sorted by name:\n`;
@@ -22,7 +22,7 @@ module.exports = {
         message.channel.send(msg);
       });
     } else {
-      message.reply("please enter a valid argument !shells {price}");
+      message.reply("please enter a valid argument !shells <price>");
     }
   }
 };

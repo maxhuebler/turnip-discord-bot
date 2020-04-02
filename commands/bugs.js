@@ -1,19 +1,28 @@
 const Bugs = require("../models/Bug");
 
-const months = ["january", "february", "march", "april", "may", "june",
-  "july", "august", "september", "october", "november", "december"
+const months = [
+  "january",
+  "february",
+  "march",
+  "april",
+  "may",
+  "june",
+  "july",
+  "august",
+  "september",
+  "october",
+  "november",
+  "december"
 ];
 
 module.exports = {
   name: "bugs",
   description:
-    "Returns list of bugs sorted by users with !bugs {month} {location | price | time}",
+    "Returns a sorted list of bugs by month with location, price, or time.",
+  args: true,
+  usage: "<month> <location || price || time>",
   execute(message, args) {
-    if (!args.length) {
-      message.reply(
-        "please use the form at of !bug {month} {location | price | time}"
-      );
-    } else if (args.length == 1) {
+    if (args.length == 1) {
       if (months.includes(args[0])) {
         let msg = `> All bugs that can be caught in ${args[0]} sorted by name:\n`;
         Bugs.find({}, null, { sort: { name: 1 } }, function(err, bugs) {
@@ -28,7 +37,7 @@ module.exports = {
           message.channel.send(msg);
         });
       } else {
-        message.reply("please enter a valid month argument !bugs {month}");
+        message.reply("please enter a valid argument !bugs <month>");
         return;
       }
     } else if (args.length == 2) {
@@ -76,7 +85,7 @@ module.exports = {
         });
       } else {
         message.reply(
-          "please enter a valid argument !bugs {month} {location | price | time}"
+          "please enter a valid argument !bugs <month> <location || price || time>"
         );
       }
     }

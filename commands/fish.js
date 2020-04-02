@@ -1,19 +1,28 @@
 const Fishes = require("../models/Fish");
 
-const months = ["january", "february", "march", "april", "may", "june",
-  "july", "august", "september", "october", "november", "december"
+const months = [
+  "january",
+  "february",
+  "march",
+  "april",
+  "may",
+  "june",
+  "july",
+  "august",
+  "september",
+  "october",
+  "november",
+  "december"
 ];
 
 module.exports = {
   name: "fish",
   description:
-    "Returns list of fish sorted by users with !fish {month} {location | price | time}",
+    "Returns a sorted list of fish by month with location, price, or time.",
+  args: true,
+  usage: "<month> <location || price || time>",
   execute(message, args) {
-    if (!args.length) {
-      message.reply(
-        "please use the form at of !fish {month} {location | price | time}"
-      );
-    } else if (args.length == 1) {
+    if (args.length == 1) {
       if (months.includes(args[0])) {
         let msg = `> All fish that can be caught in ${args[0]} sorted by name:\n`;
         Fishes.find({}, null, { sort: { name: 1 } }, function(err, fishes) {
@@ -28,7 +37,7 @@ module.exports = {
           message.channel.send(msg);
         });
       } else {
-        message.reply("please enter a valid month argument !fish {month}");
+        message.reply("please enter a valid argument !fish <month>");
       }
     } else if (args.length == 2) {
       if (args[1] === "location" && months.includes(args[0])) {
@@ -75,7 +84,7 @@ module.exports = {
         });
       } else {
         message.reply(
-          "please enter a valid argument !fish {month} {location | price | time}"
+          "please enter a valid argument !fish <month> <location || price || time>"
         );
       }
     }
