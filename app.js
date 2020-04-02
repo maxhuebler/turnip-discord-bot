@@ -30,8 +30,8 @@ client.on("message", async message => {
 
   if (command === "fish") {
     client.commands.get("fish").execute(message, args);
-  } else if (command === "bug") {
-    client.commands.get("bug").execute(message, args);
+  } else if (command === "bugs") {
+    client.commands.get("bugs").execute(message, args);
   } else if (command === "fruit") {
     client.commands.get("fruit").execute(message, args);
   } else if (command === "buying") {

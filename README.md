@@ -19,7 +19,7 @@ Passing the commands below with no arguments will print out a list of relevant d
 These commands allow the user to specify and sort a list of fish or bugs by location, price, and availability.
 ```
 !fish {month} {location | price | time}
-!bug {month} {location | price | time}
+!bugs {month} {location | price | time}
 ```
 
 ### How to set up
