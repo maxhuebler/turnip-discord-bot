@@ -7,10 +7,11 @@ This discord bot came from the idea, to alleviate the need to ask all my friends
 The working procedure is crudely described below:
 - Users tell bot their current price of turnips.
 - Users ask the bot to display everyone's current turnip price.
+- Users can use other commands to help easily display information for catching bugs and fishes.
 - Fetches relevant data from [MongoDB Atlas](https://www.mongodb.com/cloud/atlas) and sends it back to the server channel.
 
 ### Commands
-Passing the commands below with no arguments will print out a list of relevant data from users in a server.
+Passing the commands below with no arguments will print out a list of relevant data from users in a server. If a user passes in an argument, the bot will then update their price of turnips or native fruit respectively.
 ```
 !buying {price}
 !fruit {fruit}
@@ -43,5 +44,7 @@ I personally used [heroku](https://heroku.com/) since it was free and I didn't h
 ```
 yarn app.js
 ```
+
+With Heroku we're using an addon called Heroku Scheduler that allows us to call ```node reset-bell-count.js``` every 12 hours to reset everyone's bell count in the database.
 
 For heroku there is a Procfile that tells the dyno to spin up using a worker instead of web process type.
