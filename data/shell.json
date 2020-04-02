@@ -5,7 +5,7 @@
   },
   {
     "name":"Coral",
-    "price":250
+    "price":500
   },
   {
     "name":"Cowrie",
@@ -13,7 +13,7 @@
   },
   {
     "name":"Giant Clam",
-    "price":450
+    "price":900
   },
   {
     "name":"Manila Clam",
@@ -45,7 +45,7 @@
   },
   {
     "name":"Venus Comb",
-    "price":150
+    "price":300
   },
   {
     "name":"White Scallop",
